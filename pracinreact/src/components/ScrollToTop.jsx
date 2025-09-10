@@ -77,7 +77,7 @@ const ScrollToTop = () => {
           // hover:shadow-xl: Larger shadow on hover
           // transition-all, duration-300: Smooth transition for all properties
           // hover:-translate-y-1: Moves up slightly on hover
-          className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-indigo-600 to-orange-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           // Accessibility label for screen readers
           aria-label="Scroll to top"
         >

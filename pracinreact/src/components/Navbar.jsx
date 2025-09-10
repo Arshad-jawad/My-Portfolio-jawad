@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { FaYoutube, FaGithub, FaFacebook } from "react-icons/fa";
+import { IoDocumentText } from "react-icons/io5";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -18,34 +19,35 @@ const Navbar = () => {
         {/* Desktop links */}
         <ul className="hidden md:flex space-x-6 text-white items-center">
           <li>
-            <a href="#hero" className="hover:text-blue-400 transition-colors">
-              Home
+            <a href="#hero" className="hover:text-orange-400 transition-colors">
+              <span className="text-orange-400">01.</span> Home
             </a>
           </li>
           <li>
-            <a href="#tech" className="hover:text-blue-400 transition-colors">
-              Tech
+            <a href="#tech" className="hover:text-orange-400 transition-colors">
+              <span className="text-orange-400">02.</span> Tech
             </a>
           </li>
           <li>
             <a
               href="#projects"
-              className="hover:text-blue-400 transition-colors"
+              className="hover:text-orange-400 transition-colors"
             >
-              Projects
+              <span className="text-orange-400">03.</span> Projects
             </a>
           </li>
           <li>
             <a
               href="#contact"
-              className="hover:text-blue-400 transition-colors"
+              className="hover:text-orange-400 transition-colors"
             >
-              Contact
+              <span className="text-orange-400">04.</span> Contact
             </a>
           </li>
+
         </ul>
 
-        {/* Desktop social icons */}
+
         <ul className="hidden md:flex items-center space-x-4 text-white">
           <li>
             <a
@@ -85,6 +87,16 @@ const Navbar = () => {
               className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-orange-400 transition-colors"
             >
               <FaGithub />
+            </a>
+          </li>
+          <li>
+            <a
+              href="/assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-orange-500 transition-colors"
+            >
+              <IoDocumentText className="mr-1" /> Resume
             </a>
           </li>
         </ul>
