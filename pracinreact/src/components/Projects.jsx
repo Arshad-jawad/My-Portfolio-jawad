@@ -62,28 +62,28 @@ const ProjectCard = ({ project, index }) => {
     // Animated card container with hover effects
     <motion.div
       variants={itemVariants}  // Use item animation variants
-      className="group flex flex-col overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-500 hover:border-white/20 hover:bg-white/10 hover:shadow-xl"
+      className="flex flex-col overflow-hidden transition-all duration-500 border shadow-lg group rounded-2xl bg-white/5 backdrop-blur-sm border-white/10 hover:border-white/20 hover:bg-white/10 hover:shadow-xl"
     >
       {/* Image container with hover effects */}
       <div className="relative overflow-hidden">
         <img
           src={project.image}  // Project image
           alt={project.title}  // Accessibility alt text
-          className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-105"  // Image styling with hover scale
+          className="object-cover w-full h-48 transition-transform duration-700 group-hover:scale-105"  // Image styling with hover scale
         />
         {/* Gradient overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-100"></div>
       </div>
 
       {/* Content section of the card */}
-      <div className="p-6 flex flex-col gap-4">
+      <div className="flex flex-col gap-4 p-6">
         {/* Project title with hover color change */}
-        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+        <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-blue-400">
           {project.title}
         </h3>
 
         {/* Project description */}
-        <p className="text-gray-300 leading-relaxed">
+        <p className="leading-relaxed text-gray-300">
           {project.description}
         </p>
 
@@ -92,7 +92,7 @@ const ProjectCard = ({ project, index }) => {
           {project.techStack.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="px-3 py-1 text-xs font-medium rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30"
+              className="px-3 py-1 text-xs font-medium text-blue-300 border rounded-full bg-blue-500/20 border-blue-500/30"
             >
               {tech}
             </span>
@@ -103,7 +103,7 @@ const ProjectCard = ({ project, index }) => {
         {/* <div className="mt-4">
           <a 
             href={project.link}
-            className="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
+            className="inline-flex items-center text-sm font-medium text-blue-400 transition-colors duration-300 hover:text-blue-300"
           >
             View Project
             {/* Animated arrow icon */}
@@ -123,23 +123,23 @@ const Projects = () => {
     // Section container with matching gradient background
     <section
       id="projects"  // Section ID for navigation
-      className="min-h-screen flex items-center py-24 px-6 bg-gradient-to-b from-transparent via-white/5 to-transparent"
+      className="flex items-center min-h-screen px-6 py-24 bg-gradient-to-b from-transparent via-white/5 to-transparent"
     >
       {/* Container with max width and centering */}
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="w-full max-w-6xl mx-auto">
         {/* Animated section title */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}  // Start state
           animate={{ opacity: 1, y: 0 }}    // End state
           transition={{ duration: 0.5, ease: "easeOut" }}  // Animation settings
-          className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg"
+          className="mb-16 text-4xl font-black text-center text-transparent bg-white md:text-5xl from-blue-500 via-purple-500 to-pink-500 bg-clip-text drop-shadow-lg"
         >
           <span className="text-orange-400">0.3</span> My Projects
         </motion.h1>
 
         {/* Projects grid with staggered animations */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"  // Responsive grid
+          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"  // Responsive grid
           variants={containerVariants}  // Container animation variants
           initial="hidden"  // Initial animation state
           animate="visible"  // Animation trigger

@@ -29,9 +29,9 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center py-24 px-6 bg-gradient-to-b from-blue-900/40 via-purple-900/10 to-pink-900/0"
+      className="flex items-center min-h-screen px-6 py-24 bg-gradient-to-b from-blue-900/40 via-purple-900/10 to-pink-900/0"
     >
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="grid items-center w-full max-w-6xl grid-cols-1 gap-12 mx-auto lg:grid-cols-2">
         <motion.div
           className="flex flex-col items-start gap-8"
           variants={containerVariants}
@@ -40,28 +40,28 @@ const Hero = () => {
         >
           <motion.p
             variants={itemVariants}
-            className="text-base text-blue-400 font-semibold uppercase tracking-widest mb-2 drop-shadow"
+            className="mb-2 text-base font-semibold tracking-widest text-blue-400 uppercase drop-shadow"
           >
             <span className="text-orange-400">0.1</span> 👋 Hello, I'm
           </motion.p>
 
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-2xl"
+            className="text-4xl font-black leading-tight text-transparent bg-white sm:text-5xl md:text-6xl from-blue-500 via-purple-500 to-pink-500 bg-clip-text drop-shadow-2xl"
           >
             Mohammad Modasir Jawad
           </motion.h1>
 
           <motion.h2
             variants={itemVariants}
-            className="text-2xl md:text-3xl font-bold text-purple-300 underline decoration-purple-400/40 underline-offset-4 drop-shadow"
+            className="text-2xl font-bold text-purple-300 underline md:text-3xl decoration-purple-400/40 underline-offset-4 drop-shadow"
           >
-            🚀 Full Stack Developer
+            Full Stack Developer
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-200 max-w-xl font-normal leading-relaxed drop-shadow"
+            className="max-w-xl text-lg font-normal leading-relaxed text-gray-200 md:text-xl drop-shadow"
           >
             I build <span className="font-semibold text-blue-400">scalable</span>, <span className="font-semibold text-purple-400">accessible</span>, and <span className="font-semibold text-pink-400">performant</span> web applications using
             <span className="font-semibold text-blue-400"> React</span>,
@@ -76,19 +76,19 @@ const Hero = () => {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg shadow-lg font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:shadow-xl hover:-translate-y-1"
             >
               <span>🌟</span> View Projects
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-3 rounded-lg hover:bg-white/10 font-semibold transition-all duration-300 hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-5 py-3 font-semibold text-white transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10 hover:shadow-lg"
             >
               <span>✉️</span> Contact Me
             </a>
             <a
               href="/assets/resume.pdf"
-              className="sm:inline-flex items-center gap-2 hover:text-orange-400 text-sm text-white/80 px-4 py-2 rounded-lg hover:bg-white/10 font-medium transition-all duration-300"
+              className="items-center gap-2 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg sm:inline-flex hover:text-orange-400 text-white/80 hover:bg-white/10"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -98,9 +98,9 @@ const Hero = () => {
 
           <motion.div
             variants={itemVariants}
-            className="mt-8 flex flex-wrap gap-2 items-center"
+            className="flex flex-wrap items-center gap-2 mt-8"
           >
-            <span className="text-sm text-gray-400 mr-3 font-medium">Tech Stack:</span>
+            <span className="mr-3 text-sm font-medium text-gray-400">Tech Stack:</span>
             <div className="flex flex-wrap gap-2">
               <span className="bg-blue-500/20 text-blue-300 text-xs px-3 py-1.5 rounded-full font-semibold shadow border border-blue-500/30 flex items-center gap-1">
                 ⚛️ React
@@ -125,7 +125,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.5 }}
         >
           <div className="relative">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden ring-4 ring-blue-500/30 shadow-2xl transition-transform transform hover:scale-105 bg-gradient-to-tr from-blue-500/30 via-purple-500/20 to-pink-500/10">
+            <div className="w-64 h-64 overflow-hidden transition-transform transform rounded-full shadow-2xl sm:w-80 sm:h-80 md:w-96 md:h-96 ring-4 ring-blue-500/30 hover:scale-105 bg-gradient-to-tr from-blue-500/30 via-purple-500/20 to-pink-500/10">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -134,15 +134,15 @@ const Hero = () => {
                 <img
                   src={image}
                   alt="Portrait of Mohammad Modasir Jawad"
-                  className="w-full h-full object-cover object-center"
+                  className="object-cover object-center w-full h-full transition-opacity duration-500 rounded-lg opacity-70 group-hover:opacity-90 opactity-90 hover:opacity-90"
                 />
               </motion.div>
             </div>
 
             {/* Floating elements around the image */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-500/30 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-500/30 rounded-full blur-xl animate-pulse-slow"></div>
-            <div className="absolute top-1/2 left-full -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-pink-500/30 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute w-16 h-16 rounded-full -top-4 -right-4 bg-blue-500/30 blur-xl animate-pulse"></div>
+            <div className="absolute w-20 h-20 rounded-full -bottom-4 -left-4 bg-purple-500/30 blur-xl animate-pulse-slow"></div>
+            <div className="absolute w-10 h-10 -translate-x-1/2 -translate-y-1/2 rounded-full top-1/2 left-full bg-pink-500/30 blur-xl animate-pulse"></div>
           </div>
         </motion.div>
       </div>

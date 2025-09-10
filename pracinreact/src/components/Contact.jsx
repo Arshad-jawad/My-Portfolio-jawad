@@ -18,9 +18,9 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center py-24 px-6 bg-gradient-to-b from-transparent via-white/5 to-transparent"
+      className="flex items-center min-h-screen px-6 py-24 bg-gradient-to-b from-transparent via-white/5 to-transparent"
     >
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="w-full max-w-4xl mx-auto">
         <motion.div
           className="flex flex-col items-center justify-center gap-6 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -28,14 +28,14 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black">
-            <span className="bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-black md:text-5xl lg:text-4xl">
+            <span className="mb-16 text-4xl font-black text-center text-transparent bg-white md:text-5xl from-blue-500 via-purple-500 to-pink-500 bg-clip-text drop-shadow-lg">
               <span className="text-orange-400">0.4</span> Get in Touch
             </span>
           </h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
+            className="max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -50,11 +50,11 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col gap-4 items-center"
+            className="flex flex-col items-center gap-4"
           >
             <button
               onClick={handleContactClick}
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/50"
+              className="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-indigo-600 to-blue-600 shadow-indigo-500/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/50"
             >
               {showContactInfo ? "Hide Contact Info" : "Contact Me"}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -69,18 +69,18 @@ const Contact = () => {
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 w-full max-w-md"
+                  className="w-full max-w-md p-6 border rounded-lg bg-white/5 backdrop-blur-sm border-white/10"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+                  <h3 className="mb-4 text-xl font-semibold text-white">Contact Information</h3>
 
                   <div className="space-y-4">
                     <div className="flex flex-col items-center">
-                      <span className="text-gray-300 mb-1">Email</span>
+                      <span className="mb-1 text-gray-300">Email</span>
                       <div className="flex items-center gap-2">
-                        <span className="text-blue-400 font-medium">jawadmodasir@gmail.com</span>
+                        <span className="font-medium text-blue-400">jawadmodasir@gmail.com</span>
                         <button
                           onClick={() => copyToClipboard("jawadmodasir@gmail.com")}
-                          className="p-1 text-gray-400 hover:text-white transition-colors"
+                          className="p-1 text-gray-400 transition-colors hover:text-white"
                           aria-label="Copy email"
                         >
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -90,19 +90,19 @@ const Contact = () => {
                       </div>
                       <a
                         href="mailto:jawadmodasir@gmail.com"
-                        className="text-sm text-blue-400 hover:text-blue-300 mt-1"
+                        className="mt-1 text-sm text-blue-400 hover:text-blue-300"
                       >
                         Send email directly
                       </a>
                     </div>
 
-                    <div className="border-t border-white/10 pt-4 flex flex-col items-center">
-                      <span className="text-gray-300 mb-1">Phone</span>
+                    <div className="flex flex-col items-center pt-4 border-t border-white/10">
+                      <span className="mb-1 text-gray-300">Phone</span>
                       <div className="flex items-center gap-2">
-                        <span className="text-blue-400 items-center font-medium">(+93) 790 13 13 75</span>
+                        <span className="items-center font-medium text-blue-400">(+93) 790 13 13 75</span>
                         <button
                           onClick={() => copyToClipboard("+93790131375")}
-                          className="p-1 text-gray-400 hover:text-white items-center transition-colors"
+                          className="items-center p-1 text-gray-400 transition-colors hover:text-white"
                           aria-label="Copy phone number"
                         >
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

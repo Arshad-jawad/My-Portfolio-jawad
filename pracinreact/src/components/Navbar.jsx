@@ -7,31 +7,31 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full py-3 bg-white bg-opacity-20 backdrop-blur-md rounded-b-lg shadow-md z-50">
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 z-50 w-full py-3 bg-white rounded-b-lg shadow-md bg-opacity-20 backdrop-blur-md">
+      <div className="flex items-center justify-between max-w-6xl px-4 mx-auto">
         <a
           href="#home"
-          className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent opacity-90 hover:opacity-100 transition-all duration-300"
+          className="text-xl font-bold text-transparent transition-all duration-300 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text opacity-90 hover:opacity-100"
         >
           JAWAD
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex space-x-6 text-white items-center">
+        <ul className="items-center hidden space-x-6 text-white md:flex">
           <li>
-            <a href="#hero" className="hover:text-orange-400 transition-colors">
+            <a href="#hero" className="transition-colors hover:text-orange-400">
               <span className="text-orange-400">01.</span> Home
             </a>
           </li>
           <li>
-            <a href="#tech" className="hover:text-orange-400 transition-colors">
+            <a href="#tech" className="transition-colors hover:text-orange-400">
               <span className="text-orange-400">02.</span> Tech
             </a>
           </li>
           <li>
             <a
               href="#projects"
-              className="hover:text-orange-400 transition-colors"
+              className="transition-colors hover:text-orange-400"
             >
               <span className="text-orange-400">03.</span> Projects
             </a>
@@ -39,7 +39,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="hover:text-orange-400 transition-colors"
+              className="transition-colors hover:text-orange-400"
             >
               <span className="text-orange-400">04.</span> Contact
             </a>
@@ -48,13 +48,13 @@ const Navbar = () => {
         </ul>
 
 
-        <ul className="hidden md:flex items-center space-x-4 text-white">
+        <ul className="items-center hidden space-x-4 text-white md:flex">
           <li>
             <a
               href="https://www.facebook.com/modasir.jawad.3/"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-red-500 transition-colors"
+              className="text-xl transition-colors cursor-pointer opacity-80 hover:opacity-100 hover:text-red-500"
             >
               <FaFacebook />
             </a>
@@ -64,7 +64,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/mohammad-modasir-jawad-2678b613a/"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-blue-600 transition-colors"
+              className="text-xl transition-colors cursor-pointer opacity-80 hover:opacity-100 hover:text-blue-600"
             >
               <BsLinkedin />
             </a>
@@ -74,7 +74,7 @@ const Navbar = () => {
               href="https://www.instagram.com/_modasir_jawad/"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-sky-400 transition-colors"
+              className="text-xl transition-colors cursor-pointer opacity-80 hover:opacity-100 hover:text-sky-400"
             >
               <BsInstagram />
             </a>
@@ -84,7 +84,7 @@ const Navbar = () => {
               href="https://github.com/Arshad-jawad"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-orange-400 transition-colors"
+              className="text-xl transition-colors cursor-pointer opacity-80 hover:opacity-100 hover:text-orange-400"
             >
               <FaGithub />
             </a>
@@ -94,7 +94,7 @@ const Navbar = () => {
               href="/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-orange-500 transition-colors"
+              className="flex items-center text-xl transition-colors cursor-pointer opacity-80 hover:opacity-100 hover:text-orange-500"
             >
               <IoDocumentText className="mr-1" /> Resume
             </a>
@@ -107,12 +107,12 @@ const Navbar = () => {
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation"
             aria-expanded={open}
-            className="text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2"
+            className="p-2 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2"
           >
             {open ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -127,7 +127,7 @@ const Navbar = () => {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -146,13 +146,13 @@ const Navbar = () => {
 
       {/* Mobile menu panel */}
       {open && (
-        <div className="md:hidden bg-white bg-opacity-10 backdrop-blur-sm px-4 pt-2 pb-4">
+        <div className="px-4 pt-2 pb-4 bg-white md:hidden bg-opacity-10 backdrop-blur-sm">
           <ul className="flex flex-col space-y-2 text-white">
             <li>
               <a
                 href="#hero"
                 onClick={() => setOpen(false)}
-                className="block py-2 px-1 hover:text-blue-400"
+                className="block px-1 py-2 hover:text-blue-400"
               >
                 Home
               </a>
@@ -161,7 +161,7 @@ const Navbar = () => {
               <a
                 href="#tech"
                 onClick={() => setOpen(false)}
-                className="block py-2 px-1 hover:text-blue-400"
+                className="block px-1 py-2 hover:text-blue-400"
               >
                 Tech
               </a>
@@ -170,7 +170,7 @@ const Navbar = () => {
               <a
                 href="#projects"
                 onClick={() => setOpen(false)}
-                className="block py-2 px-1 hover:text-blue-400"
+                className="block px-1 py-2 hover:text-blue-400"
               >
                 Projects
               </a>
@@ -179,19 +179,19 @@ const Navbar = () => {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="block py-2 px-1 hover:text-blue-400"
+                className="block px-1 py-2 hover:text-blue-400"
               >
                 Contact
               </a>
             </li>
           </ul>
 
-          <div className="flex items-center space-x-4 mt-3 text-white">
+          <div className="flex items-center mt-3 space-x-4 text-white">
             <a
               href="https://www.facebook.com/modasir.jawad.3"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-red-500"
+              className="text-xl cursor-pointer opacity-80 hover:opacity-100 hover:text-red-500"
             >
               <FaFacebook />
             </a>
@@ -199,7 +199,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/mohammad-modasir-jawad-2678b613a"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-blue-600"
+              className="text-xl cursor-pointer opacity-80 hover:opacity-100 hover:text-blue-600"
             >
               <BsLinkedin />
             </a>
@@ -207,7 +207,7 @@ const Navbar = () => {
               href="https://www.instagram.com/_modasir_jawad"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-sky-400"
+              className="text-xl cursor-pointer opacity-80 hover:opacity-100 hover:text-sky-400"
             >
               <BsInstagram />
             </a>
@@ -215,7 +215,7 @@ const Navbar = () => {
               href="https://github.com/Arshad-jawad"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-xl opacity-80 hover:opacity-100 hover:text-orange-900"
+              className="text-xl cursor-pointer opacity-80 hover:opacity-100 hover:text-orange-900"
             >
               <FaGithub />
             </a>
