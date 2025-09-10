@@ -31,7 +31,7 @@ const projectData = [
     techStack: ["React", "Socket.io", "Node.js", "MongoDB", "Cloudinary"],
     link: "#"
   },
- 
+
 ];
 
 // Animation variants for container (staggered children)
@@ -66,7 +66,7 @@ const ProjectCard = ({ project, index }) => {
     >
       {/* Image container with hover effects */}
       <div className="relative overflow-hidden">
-        <img 
+        <img
           src={project.image}  // Project image
           alt={project.title}  // Accessibility alt text
           className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-105"  // Image styling with hover scale
@@ -74,23 +74,23 @@ const ProjectCard = ({ project, index }) => {
         {/* Gradient overlay on hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
-      
+
       {/* Content section of the card */}
       <div className="p-6 flex flex-col gap-4">
         {/* Project title with hover color change */}
         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
           {project.title}
         </h3>
-        
+
         {/* Project description */}
         <p className="text-gray-300 leading-relaxed">
           {project.description}
         </p>
-        
+
         {/* Technology badges */}
         <div className="flex flex-wrap gap-2 mt-2">
           {project.techStack.map((tech, techIndex) => (
-            <span 
+            <span
               key={techIndex}
               className="px-3 py-1 text-xs font-medium rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30"
             >
@@ -98,7 +98,7 @@ const ProjectCard = ({ project, index }) => {
             </span>
           ))}
         </div>
-        
+
         {/* Project link with arrow animation */}
         {/* <div className="mt-4">
           <a 
@@ -107,11 +107,11 @@ const ProjectCard = ({ project, index }) => {
           >
             View Project
             {/* Animated arrow icon */}
-            {/* <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        {/* <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path> */}
-            {/* </svg>
+        {/* </svg>
           </a> */}
-        {/* </div> */} 
+        {/* </div> */}
       </div>
     </motion.div>
   );
@@ -121,24 +121,24 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
   return (
     // Section container with matching gradient background
-    <section 
+    <section
       id="projects"  // Section ID for navigation
       className="min-h-screen flex items-center py-24 px-6 bg-gradient-to-b from-transparent via-white/5 to-transparent"
     >
       {/* Container with max width and centering */}
       <div className="max-w-6xl mx-auto w-full">
         {/* Animated section title */}
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}  // Start state
           animate={{ opacity: 1, y: 0 }}    // End state
           transition={{ duration: 0.5, ease: "easeOut" }}  // Animation settings
           className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg"
         >
-          My Projects
+          <span className="text-orange-400">0.3</span> My Projects
         </motion.h1>
-        
+
         {/* Projects grid with staggered animations */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"  // Responsive grid
           variants={containerVariants}  // Container animation variants
           initial="hidden"  // Initial animation state
