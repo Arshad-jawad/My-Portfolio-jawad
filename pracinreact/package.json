@@ -20,6 +20,7 @@
     "@testing-library/react": "^13.0.0",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.0",
     "stylelint": "^14.0.0",
     "stylelint-config-standard": "^23.0.0",
